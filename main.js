@@ -70,12 +70,10 @@ function changeHP(player1, player2) {
   let $player1Life = document.querySelector('.player' + player1.player + ' .life')
   let $player2Life = document.querySelector('.player' + player2.player + ' .life')
 
-  if (player1.hp > 0 || player2.hp > 0) {    
     player1.hp -= ramdomNumber();
     player2.hp -= ramdomNumber();
     $player1Life.style.width = player1.hp + '%';
     $player2Life.style.width = player2.hp + '%';
-  }
 
   if (player1.hp <= 0) {
     $arenas.append(playerWins(player2.name));
